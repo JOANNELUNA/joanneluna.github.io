@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page and page.title %}{{ page.title }} — {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+  <meta name="color-scheme" content="light dark">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="{{ get_url(path='@/_index.md') }}">My Garden</a>
+      <div class="spacer"></div>
+      <a href="{{ get_url(path='@/docs/_index.md') }}">Docs</a>
+      <a href="https://getzola.org" rel="noopener" target="_blank">Zola</a>
+    </nav>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock content %}
+  </main>
+  <footer class="container site-footer">
+    <p>© {{ now() | date(format="%Y") }} • Built with <a href="https://getzola.org" target="_blank" rel="noopener">Zola</a>.</p>
+  </footer>
+</body>
+</html>

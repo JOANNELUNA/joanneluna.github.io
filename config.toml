@@ -1,0 +1,10 @@
+base_url = "https://example.com"  # <- change to your domain before deploying
+title = "My Garden"
+compile_sass = false
+build_search_index = true
+language_code = "en-GB"
+
+[markdown]
+highlight_code = true
+highlight_theme = "kronuz"
+smart_punctuation = true
